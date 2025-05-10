@@ -7,6 +7,7 @@ import { useSearchParams } from "react-router-dom";
 import ReactPaginate from "react-paginate";
 import Loader from "../loader";
 
+
 const List = () => {
     const [searchParams,setSearchParams] = useSearchParams()
     const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -40,7 +41,7 @@ const page: string = searchParams.get("page") || "1";
 if(isLoading) return <Warning><Loader/></Warning>;
 
 // 2) error dolu ise apıden hatalı cevap gelmiştir
-if(error) return <Warning>{error} </Warning>;
+if(error) return <Warning> {error} </Warning>;
 
 // 3 card boş dizi ise aranılan kriterde veri yoktur
 if(!cars || cars.length < 1) 

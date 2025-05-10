@@ -1,8 +1,8 @@
 
-import { FC, JSX } from "react"
+import { FC, JSX, ReactNode } from "react"
 
-interface Props {
-    children: JSX.Element | string;
+type Props = {
+    children: React.ReactNode;
 }
 
 const Warning: FC<Props> = ({ children }) => {
