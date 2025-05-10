@@ -19,10 +19,13 @@ const Year:FC = () => {
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col mt-3">
-      <label>Yıl</label>
+      <label htmlFor="year">Yıl</label>
 
       <div className="flex">
         <input
+        id="year"
+        value={year}
+        name="year"
         type="number"
         placeholder="örn:2025"
         onChange={(e) => setYear(e.target.value)}

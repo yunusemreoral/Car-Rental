@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { FC } from 'react'
 
-const Loader = () => {
+const Loader: FC = () => {
   return (
    <div className="text-center">
       <div role="status">
